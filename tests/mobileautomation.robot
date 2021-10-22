@@ -41,8 +41,8 @@ E pesquise um vídeo sobre "${PESQUISA}"
     Press Keycode                        66
 
 E acessar o canal da Prime
-    Wait Until Element Is Visible        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 69 visualizações - há 1 ano - assistir o vídeo
-    Click Element                        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 69 visualizações - há 1 ano - assistir o vídeo
+    Wait Until Element Is Visible        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 73 visualizações - há 1 ano - assistir o vídeo
+    Click Element                        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 73 visualizações - há 1 ano - assistir o vídeo
 
 Quando clicar em Inscrever-se
     Click Element                        accessibility_id=Inscreva-se em Prime Control.
