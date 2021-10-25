@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.5 on win32)" generated="20211025 00:00:14.783" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\NefiProfissional\.vscode\extensions\robocorp.robotframework-lsp-0.25.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Acessar a página home do site Automation Practice">
+<msg timestamp="20211025 00:00:16.322" level="FAIL">No keyword with name 'Acessar a página home do site Automation Practice' found.</msg>
+<status status="FAIL" starttime="20211025 00:00:16.322" endtime="20211025 00:00:16.322"/>
+</kw>
+<kw name="Passar o mouse por cima da categoria &quot;Women&quot; no menu principal superior de categorias">
+<status status="NOT RUN" starttime="20211025 00:00:16.324" endtime="20211025 00:00:16.324"/>
+</kw>
+<kw name="Clicar na sub categoria &quot;Summer Dresses&quot;">
+<status status="NOT RUN" starttime="20211025 00:00:16.325" endtime="20211025 00:00:16.326"/>
+</kw>
+<kw name="Conferir se os produtos da sub-categoria &quot;Summer Dresses&quot; foram mostrados na página">
+<status status="NOT RUN" starttime="20211025 00:00:16.327" endtime="20211025 00:00:16.327"/>
+</kw>
+<status status="PASS" starttime="20211025 00:00:14.818" endtime="20211025 00:00:19.760"/>
+</kw>
+<status status="PASS" starttime="20211025 00:00:14.817" endtime="20211025 00:00:19.760"/>
+</test>
+<status status="PASS" starttime="20211025 00:00:14.786" endtime="20211025 00:00:19.761"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

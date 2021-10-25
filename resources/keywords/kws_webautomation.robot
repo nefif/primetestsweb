@@ -7,7 +7,7 @@ Resource    ../package.robot
 *** Variables ***
 ${BROWSER}    chrome
 ${URL}        http://automationpractice.com/
-${EMAIL}      teste@testesPrimeH.com.br
+${EMAIL}      testes@testesPrimeHr.com.br
 ${NOME}        Néfi
 ${SOBRENOME}    Fernandes
 ${PASSWORD}    12345
