@@ -1,129 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.9.5 on win32)" generated="20211022 19:56:21.150" rpa="false" schemaversion="2">
-<suite id="s1" name="Mobileautomation" source="C:\Users\NefiProfissional\Desktop\curso prime robot\tests\mobileautomation.robot">
-<test id="s1-t1" name="Caso de Teste 01: Pesquisar canal “Prime Experts”">
-<kw name="Abrir aplicativo" type="SETUP">
-<kw name="Set Appium Timeout" library="AppiumLibrary">
+<robot generator="Robot 4.1.2 (Python 3.9.5 on win32)" generated="20211024 23:48:55.160" rpa="false" schemaversion="2">
+<suite id="s1" name="Webautomation" source="C:\Users\NefiProfissional\Desktop\primetestsweb\tests\webautomation.robot">
+<test id="s1-t1" name="Caso de Teste 04: Adicionar Cliente">
+<kw name="Abrir navegador" library="hooks" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211024 23:48:55.417" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20211024 23:48:55.417" endtime="20211024 23:48:56.595"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211024 23:48:56.595" endtime="20211024 23:48:56.721"/>
+</kw>
+<status status="PASS" starttime="20211024 23:48:55.416" endtime="20211024 23:48:56.721"/>
+</kw>
+<kw name="Acessar a página home do site Automation Practice" library="kws_webautomation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211024 23:48:56.723" level="INFO">Opening url 'http://automationpractice.com/'</msg>
+<status status="PASS" starttime="20211024 23:48:56.723" endtime="20211024 23:49:01.560"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME.TITLE_PAGE_HOME}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211024 23:49:01.568" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20211024 23:49:01.561" endtime="20211024 23:49:01.568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME.HEADER_OPTIONS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211024 23:49:01.568" endtime="20211024 23:49:01.594"/>
+</kw>
+<status status="PASS" starttime="20211024 23:48:56.722" endtime="20211024 23:49:01.595"/>
+</kw>
+<kw name="Clicar em &quot;Sign in&quot;" library="kws_webautomation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CADASTRO.BTN_SINGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:01.597" level="INFO">Clicking element '//*[@id="header"]/div[2]/div/div/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20211024 23:49:01.596" endtime="20211024 23:49:03.759"/>
+</kw>
+<status status="PASS" starttime="20211024 23:49:01.595" endtime="20211024 23:49:03.760"/>
+</kw>
+<kw name="Informar um e-mail válido" library="kws_webautomation">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${CADASTRO.TITTLE_PAGE_LOGIN}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211024 23:49:03.772" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20211024 23:49:03.761" endtime="20211024 23:49:03.772"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=${CADASTRO.INPUT_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:03.774" level="INFO">Typing text 'teste@testesPrimeH.com.br' into text field 'id=email_create'.</msg>
+<status status="PASS" starttime="20211024 23:49:03.772" endtime="20211024 23:49:03.876"/>
+</kw>
+<status status="PASS" starttime="20211024 23:49:03.760" endtime="20211024 23:49:03.877"/>
+</kw>
+<kw name="Clicar em &quot;Create an account&quot;" library="kws_webautomation">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=${CADASTRO.BTN_SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:03.878" level="INFO">Clicking button 'id=SubmitCreate'.</msg>
+<status status="PASS" starttime="20211024 23:49:03.878" endtime="20211024 23:49:03.946"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="PASS" starttime="20211022 19:56:21.386" endtime="20211022 19:56:21.386"/>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211024 23:49:08.957" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211024 23:49:03.946" endtime="20211024 23:49:08.957"/>
 </kw>
-<kw name="Open Application" library="AppiumLibrary">
-<arg>http://localhost:4723/wd/hub</arg>
-<arg>platformName=Android</arg>
-<arg>deviceName=R9QR1042KJW</arg>
-<arg>automationName=uiautomator2</arg>
-<arg>appPackage=com.google.android.youtube</arg>
-<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
-<arg>autoGrantPermissions=true</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20211022 19:56:21.386" endtime="20211022 19:56:37.980"/>
+<status status="PASS" starttime="20211024 23:49:03.877" endtime="20211024 23:49:08.957"/>
 </kw>
-<status status="PASS" starttime="20211022 19:56:21.385" endtime="20211022 19:56:37.980"/>
+<kw name="Preencher os dados obrigatórios" library="kws_webautomation">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_NOME}</arg>
+<arg>${NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:08.959" level="INFO">Typing text 'Néfi' into text field 'customer_firstname'.</msg>
+<status status="PASS" starttime="20211024 23:49:08.958" endtime="20211024 23:49:09.060"/>
 </kw>
-<kw name="Dado que o cliente esteja na tela de Home">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>xpath=//*[contains(@text, 'Início')]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20211022 19:56:37.981" endtime="20211022 19:56:42.259"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_SOBRENOME}</arg>
+<arg>${SOBRENOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.061" level="INFO">Typing text 'Fernandes' into text field 'customer_lastname'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.060" endtime="20211024 23:49:09.157"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>accessibility_id=YouTube</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20211022 19:56:42.259" endtime="20211022 19:56:43.372"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_SENHA}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.159" level="INFO">Typing password into text field 'passwd'.</msg>
+<msg timestamp="20211024 23:49:09.199" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211024 23:49:09.258" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211024 23:49:09.158" endtime="20211024 23:49:09.258"/>
 </kw>
-<status status="PASS" starttime="20211022 19:56:37.981" endtime="20211022 19:56:43.372"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_PRIMEIRO_NOME}</arg>
+<arg>${NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.259" level="INFO">Typing text 'Néfi' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.258" endtime="20211024 23:49:09.359"/>
 </kw>
-<kw name="E pesquise um vídeo sobre &quot;Prime Experts&quot;" sourcename="E pesquise um vídeo sobre &quot;${PESQUISA}&quot;">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>accessibility_id=Pesquisar</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211022 19:56:43.375" level="INFO">Clicking element 'accessibility_id=Pesquisar'.</msg>
-<status status="PASS" starttime="20211022 19:56:43.373" endtime="20211022 19:56:43.602"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_ULTIMO_NOME}</arg>
+<arg>${SOBRENOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.360" level="INFO">Typing text 'Fernandes' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.359" endtime="20211024 23:49:09.456"/>
 </kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>id=search_edit_text</arg>
-<arg>${PESQUISA}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211022 19:56:43.604" level="INFO">Typing text 'Prime Experts' into text field 'id=search_edit_text'</msg>
-<status status="PASS" starttime="20211022 19:56:43.602" endtime="20211022 19:56:46.156"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_ENDERECO}</arg>
+<arg>${ENDERECO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.457" level="INFO">Typing text 'Rua Teste,23' into text field 'address1'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.456" endtime="20211024 23:49:09.547"/>
 </kw>
-<kw name="Press Keycode" library="AppiumLibrary">
-<arg>66</arg>
-<doc>Sends a press of keycode to the device.</doc>
-<status status="PASS" starttime="20211022 19:56:46.157" endtime="20211022 19:56:47.093"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_CIDADE}</arg>
+<arg>${CIDADE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.548" level="INFO">Typing text 'Teste' into text field 'city'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.547" endtime="20211024 23:49:09.650"/>
 </kw>
-<status status="PASS" starttime="20211022 19:56:43.373" endtime="20211022 19:56:47.094"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${CADASTRO.SELECT_ESTADO}</arg>
+<arg>${ESTADO}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20211024 23:49:09.651" level="INFO">Selecting options from selection list 'id_state' by label Alabama.</msg>
+<status status="PASS" starttime="20211024 23:49:09.651" endtime="20211024 23:49:09.724"/>
 </kw>
-<kw name="E acessar o canal da Prime">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 73 visualizações - há 1 ano - assistir o vídeo</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20211022 19:56:47.095" endtime="20211022 19:56:50.001"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_ZIP_CODE}</arg>
+<arg>${ZIPCODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.726" level="INFO">Typing text '12345' into text field 'postcode'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.725" endtime="20211024 23:49:09.824"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 73 visualizações - há 1 ano - assistir o vídeo</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211022 19:56:50.003" level="INFO">Clicking element 'accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 73 visualizações - há 1 ano - assistir o vídeo'.</msg>
-<status status="PASS" starttime="20211022 19:56:50.001" endtime="20211022 19:56:52.254"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${CADASTRO.SELECT_PAIS}</arg>
+<arg>${PAIS}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20211024 23:49:09.826" level="INFO">Selecting options from selection list 'id_country' by label United States.</msg>
+<status status="PASS" starttime="20211024 23:49:09.825" endtime="20211024 23:49:09.868"/>
 </kw>
-<status status="PASS" starttime="20211022 19:56:47.095" endtime="20211022 19:56:52.254"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_PHONE}</arg>
+<arg>${CELULAR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.870" level="INFO">Typing text '+558155598598' into text field 'phone_mobile'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.869" endtime="20211024 23:49:09.979"/>
 </kw>
-<kw name="Quando clicar em Inscrever-se">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>accessibility_id=Inscreva-se em Prime Control.</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211022 19:56:52.257" level="INFO">Clicking element 'accessibility_id=Inscreva-se em Prime Control.'.</msg>
-<status status="PASS" starttime="20211022 19:56:52.255" endtime="20211022 19:56:52.873"/>
+<status status="PASS" starttime="20211024 23:49:08.958" endtime="20211024 23:49:09.980"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>accessibility_id=Inscreva-se em Prime Control.</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211022 19:56:52.875" level="INFO">Clicking element 'accessibility_id=Inscreva-se em Prime Control.'.</msg>
-<status status="PASS" starttime="20211022 19:56:52.873" endtime="20211022 19:56:53.559"/>
+<kw name="Submeter cadastro" library="kws_webautomation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CADASTRO.BTN_VALIDAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211024 23:49:09.984" level="INFO">Clicking element 'submitAccount'.</msg>
+<status status="PASS" starttime="20211024 23:49:09.982" endtime="20211024 23:49:14.932"/>
 </kw>
-<status status="PASS" starttime="20211022 19:56:52.255" endtime="20211022 19:56:53.559"/>
+<status status="PASS" starttime="20211024 23:49:09.981" endtime="20211024 23:49:14.932"/>
 </kw>
-<kw name="Então será apresentado como Inscrito">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>accessibility_id=Cancelar inscrição de Prime Control.</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20211022 19:56:53.560" endtime="20211022 19:56:54.319"/>
+<kw name="Conferir se o cadastro foi efetuado com sucesso" library="kws_webautomation">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${CADASTRO.TITTLE_PAGE_CADASTRO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211024 23:49:14.941" level="INFO">Page title is 'My account - My Store'.</msg>
+<status status="PASS" starttime="20211024 23:49:14.935" endtime="20211024 23:49:14.942"/>
 </kw>
-<status status="PASS" starttime="20211022 19:56:53.560" endtime="20211022 19:56:54.320"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211024 23:49:19.952" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211024 23:49:14.942" endtime="20211024 23:49:19.952"/>
 </kw>
-<kw name="Fechar aplicativo" type="TEARDOWN">
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20211022 19:56:56.401" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20211022 19:56:54.321" endtime="20211022 19:56:56.401"/>
+<status status="PASS" starttime="20211024 23:49:14.933" endtime="20211024 23:49:19.952"/>
 </kw>
-<kw name="Close Application" library="AppiumLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20211022 19:56:56.402" endtime="20211022 19:56:57.478"/>
+<kw name="Fechar navegador" library="hooks" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211024 23:49:20.095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211024 23:49:19.954" endtime="20211024 23:49:20.095"/>
 </kw>
-<status status="PASS" starttime="20211022 19:56:54.320" endtime="20211022 19:56:57.478"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211024 23:49:20.096" endtime="20211024 23:49:22.270"/>
 </kw>
-<tag>PRIME</tag>
-<status status="PASS" starttime="20211022 19:56:21.384" endtime="20211022 19:56:57.478"/>
+<status status="PASS" starttime="20211024 23:49:19.953" endtime="20211024 23:49:22.270"/>
+</kw>
+<tag>ADICIONAR_CLIENTE</tag>
+<status status="PASS" starttime="20211024 23:48:55.415" endtime="20211024 23:49:22.271"/>
 </test>
-<doc>Testes Mobile</doc>
-<status status="PASS" starttime="20211022 19:56:21.152" endtime="20211022 19:56:57.480"/>
+<doc>Aqui estarão presentes os primeiros testes automatizados web.</doc>
+<status status="PASS" starttime="20211024 23:48:55.162" endtime="20211024 23:49:22.272"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">PRIME</stat>
+<stat pass="1" fail="0" skip="0">ADICIONAR_CLIENTE</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Mobileautomation">Mobileautomation</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Webautomation">Webautomation</stat>
 </suite>
 </statistics>
 <errors>
